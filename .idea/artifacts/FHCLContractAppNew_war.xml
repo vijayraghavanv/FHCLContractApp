@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FHCLContractAppNew:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/FHCLContractAppNew_war</output-path>
+    <root id="archive" name="FHCLContractApp.war">
+      <element id="artifact" artifact-name="FHCLContractApp:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Contract</title>
+    <link id="bs-css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link id="bsdp-css" href="bootstrap-datepicker/css/bootstrap-datepicker3.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+</head>
+<body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+
+<div class="container-fluid">
+    <form action="fhclServlet" method="post">
+        <input type="hidden" name="htmlFormName" value="contract"/>
+        <fieldset name="Contract" class="col-md-12">
+            <legend class="text-uppercase font-weight-bold"> Contract</legend>
+            <fieldset class="col-md-12">
+                <legend class="text-uppercase"> Contract Details</legend>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input class="form-control form-control-sm" type="text" id="contractID" name="contractID"
+                           placeholder="Contract ID"/>
+                </div>
+                <div class="input-group date col-md-4" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+                    <input type="text" class="form-control" id="contractDate" name="contractDate"
+                           placeholder="Contract Date">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-th"></span></div>
+                </div>
+
+                <select class="selectpicker col-md-4" id="validityInYears" title="Validity (Years)">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input class="form-control form-control-sm" type="text" id="FHCLZonalManagerID"
+                           name="FHCLZonalManagerID"
+                           placeholder="Zonal Manager ID"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <input class="form-control form-control-sm" type="text" id="FHCLZonalManagerName"
+                           name="FHCLZonalManagerName"
+                           placeholder="Zonal Manager Name"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <input class="form-control form-control-sm" type="text" id="salesManager" name="salesManager"
+                           placeholder="Sales Manager Name"/>
+                </div>
+
+            </div>
+            </fieldset>
+            <fieldset class="col-md-12">
+                <legend class="text-uppercase">Customer Details</legend>
+                <div class="form-row ">
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="customerID" name="customerID"
+                               placeholder="Customer ID"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="customerName" name="customerName"
+                               placeholder="Customer Name"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="customerRepresentative"
+                               name="customerRepresentative"
+                               placeholder="Customer Rep"/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control form-control-sm" type="text" id="customerAddress"
+                                  name="customerAddress" rows="3" placeholder="Customer Address"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="col-md-12">
+                <legend class="text-uppercase">Coffee Machine Details</legend>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input class="form-control form-control-sm" type="text" id="coffeeMachineID" name="coffeeMachineID"
+                               placeholder="Coffee Machine ID"/>
+
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control form-control-sm" type="text" id="installationCompanyName" name="installationCompanyName"
+                               placeholder="Coffee Machine Installation Company Name"/>
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control form-control-sm" type="text" id="installationAddress"
+                                  name="installationAddress" rows="3" placeholder="Address where machine is to be installed"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="col-md-12">
+                <legend class="text-uppercase">Commercial Terms</legend>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="costPerMonth" name="costPerMonth"
+                               placeholder="Machine Cost per Month (In Rupees)"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="coffeeCostPerKg" name="coffeeCostPerKg"
+                               placeholder="Coffee Cost Per Kg (In Rupees)"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="teaCostPerKg" name="teaCostPerKg"
+                               placeholder="Tea Cost Per Kg (In Rupees)"/>
+                    </div>
+                    </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input class="form-control form-control-sm" type="text" id="costPerCupForNonFHCLBeans" name="costPerCupForNonFHCLBeans"
+                               placeholder="Coffee Cost per Kg for non FHCL Beans (In Rupees)"/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control form-control-sm" type="text" id="yearEndUplift" name="yearEndUplift"
+                               placeholder="Uplift to be applied at the end of the year (Percentage)"/>
+                    </div>
+                    </div>
+
+            </fieldset>
+            <fieldset class="col-md-12">
+                <legend class="text-uppercase">Other Terms</legend>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="MUCBillSettlementTime" name="MUCBillSettlementTime"
+                               placeholder="MUC Bill Settlement Time (in Days)"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="interestRate" name="interestRate"
+                               placeholder="Interest Rate (%)"/>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input class="form-control form-control-sm" type="text" id="disputeRaiseTime" name="disputeRaiseTime"
+                               placeholder="Dispute Raise Time (in Days)"/>
+                    </div>
+                    </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input class="form-control form-control-sm" type="text" id="gracePeriod" name="gracePeriod"
+                               placeholder="Grace Period (in Days)"/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control form-control-sm" type="text" id="noticePeriod" name="noticePeriod"
+                               placeholder="Notice Period (in Days)"/>
+                    </div>
+
+                    </div>
+
+            </fieldset>
+        </fieldset>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+</div>
+<script type="text/javascript">
+    $('#sandbox-container .input-group.date').datepicker({
+        format: "dd/mm/yyyy"
+    });
+</script>
+</body>
+</html>
